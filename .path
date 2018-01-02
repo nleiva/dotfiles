@@ -5,4 +5,4 @@ export GOPATH="${HOME}/go"
 export GOROOT=/usr/local/go
 
 # Update path
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin:/usr/local/go/bin:/sbin
+export PATH="$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin:/usr/local/go/bin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
