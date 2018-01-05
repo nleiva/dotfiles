@@ -2,7 +2,12 @@
 
 # Go stuff
 export GOPATH="${HOME}/go"
-export GOROOT=/usr/local/go
+# Go Linux
+#export GOROOT=/usr/local/go/bin/
+
+# Go installed by Brew
+export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
+export GOROOT=$(brew --prefix)/Cellar/go/${GOVERSION}/libexec
 
 # Update path
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin:/usr/local/go/bin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
