@@ -1,13 +1,28 @@
 #!/bin/sh
 
+kernel=$(uname -s) 
+
 # Go stuff
 export GOPATH="${HOME}/go"
-# Go Linux
-#export GOROOT=/usr/local/go/bin/
 
-# Go installed by Brew
-export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
-export GOROOT=$(brew --prefix)/Cellar/go/${GOVERSION}/libexec
+# Go Linux
+if [ ${kernel} = Linux ] ; then
+  export GOROOT=/usr/local/go/
+  
+  if [ -e "/usr/lib/go-1.8/bin/go" ] ; then
+    export GOROOT=/usr/lib/go-1.8/
+  fi
+  
+  if [ -e "/usr/lib/go-1.9/bin/go" ] ; then
+    export GOROOT=/usr/lib/go-1.9/
+  fi
+fi
+
+# Go installed by Brew (MAC)
+if [ ${kernel} = Darwin ] ; then
+  export GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
+  export GOROOT=$(brew --prefix)/Cellar/go/${GOVERSION}/libexec
+fi
 
 # Update path
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin:/usr/local/go/bin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
