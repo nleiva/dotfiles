@@ -46,3 +46,15 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 
 # OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
+
+# GNU sed
+alias sed=gsed
+
+# Personal Devices - PLEASE IGNORE
+alias ztp='ssh nleiva@mrstn-ztp.cisco.com'
+alias jenkins='ssh nleiva@mrstn-jenkins.cisco.com'
+alias ts04='ssh nleiva@mrstn-termserv-04.cisco.com'
+alias ncs11='ssh cisco@mrstn-5501-1.cisco.com'
+alias ncs12='ssh cisco@mrstn-5501-2.cisco.com'
+alias ncs13='ssh cisco@mrstn-5501-3.cisco.com'
+alias ncs14='ssh cisco@mrstn-5501-4.cisco.com'

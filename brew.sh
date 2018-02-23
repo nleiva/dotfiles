@@ -29,6 +29,7 @@ brew install grep
 brew install openssh
 brew install screen
 brew install curl
+brew install gnu-sed
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install nmap
