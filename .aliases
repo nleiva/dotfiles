@@ -1,5 +1,7 @@
 #!/bin/bash
 
+kernel=$(uname -s) 
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -41,16 +43,25 @@ alias sudo='sudo '
 # IP addresses
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# OS X has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
+if [ ${kernel} = Darwin ] ; then
+  # OS X has no `md5sum`, so use `md5` as a fallback
+  command -v md5sum > /dev/null || alias md5sum="md5"
 
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
+  # OS X has no `sha1sum`, so use `shasum` as a fallback
+  command -v sha1sum > /dev/null || alias sha1sum="shasum"
+fi
 
 # GNU sed
 alias sed=gsed
 
+# iproute2 (Linux only)
+if [ ${kernel} = Linux ] ; then
+  alias ip='ip --color'
+  alias ipb='ip --color --brief'
+fi
+
 # Personal Devices - PLEASE IGNORE
+# Devices
 alias ztp='ssh nleiva@mrstn-ztp.cisco.com'
 alias jenkins='ssh nleiva@mrstn-jenkins.cisco.com'
 alias ts04='ssh nleiva@mrstn-termserv-04.cisco.com'

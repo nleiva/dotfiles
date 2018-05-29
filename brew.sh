@@ -30,6 +30,7 @@ brew install openssh
 brew install screen
 brew install curl
 brew install gnu-sed
+brew install iproute2mac
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install nmap
