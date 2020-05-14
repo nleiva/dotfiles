@@ -132,7 +132,3 @@ export PS2;
 PS1="\[${userStyle}\]\u"; # username
 PS1+="\[${reset}\]@x1 \[${cyan}\]\W ⇨ \[${reset}\] ";
 export PS1;
-
-
-# Change CTRL+C
-stty intr ^z
