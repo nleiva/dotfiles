@@ -105,28 +105,34 @@ else
 	hostStyle="${yellow}";
 fi;
 
+# Backup prompt 1
 # Set the terminal title and prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\] at ";
-PS1+="\[${hostStyle}\]\h"; # host
-PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
-PS1+="\n";
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
-export PS1;
+#PS1="\[\033]0;\W\007\]"; # working directory base name
+#PS1+="\[${bold}\]\n"; # newline
+#PS1+="\[${userStyle}\]\u"; # username
+#PS1+="\[${white}\] at ";
+#PS1+="\[${hostStyle}\]\h"; # host
+#PS1+="\[${white}\] in ";
+#PS1+="\[${green}\]\w"; # working directory full path
+#PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
+#PS1+="\n";
+#PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+#export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
 export PS2;
 
-# Backup prompt
+# Backup prompt 2
 # source /usr/share/git-core/contrib/completion/git-prompt.sh
 # export GIT_PS1_SHOWDIRTYSTATE=true
 # export GIT_PS1_SHOWUNTRACKEDFILES=true
 # export PS1='[\e[1;33m\u\e[0m@x1 \e[1;34m\W\e[0m$(declare -F __git_ps1 &>/dev/null && __git_ps1 "
 # (%s)")]\$ '
+
+PS1="\[${userStyle}\]\u"; # username
+PS1+="\[${reset}\]@x1 \[${cyan}\]\W ⇨ \[${reset}\] ";
+export PS1;
+
 
 # Change CTRL+C
 stty intr ^z
