@@ -25,4 +25,7 @@ stty intr ^z
 alias ios='sshpass -p C1sco12345 ssh -p 8181 developer@ios-xe-mgmt-latest.cisco.com'
 alias iosxr='sshpass -p C1sco12345 ssh -p 8181 admin@sbx-iosxr-mgmt.cisco.com'
 alias nxos='sshpass -p Admin_1234! ssh -p 8181 admin@sbx-nxos-mgmt.cisco.com'
-alias tower='ssh -i ~/nleiva-key-pair.pem centos@tower.nleiva.com'
+
+# Personal instances (SG protected)
+alias tower='ssh -i ~/nleiva-KeyPair.pem centos@tower.nleiva.com'
+alias splunk='ssh -i ~/nleiva-KeyPair.pem centos@splunk.nleiva.com'
