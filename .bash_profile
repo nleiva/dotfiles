@@ -27,5 +27,8 @@ source /usr/share/git-core/contrib/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
-# Change CTRL+C
+# Change CTRL+C (list all with stty -a), so I can use it for Copy & Paste
 stty intr ^z
+
+# Add SSH private keys into the SSH authentication agent
+ssh-add ~/.ssh/*.pem 
