@@ -28,7 +28,7 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # Change CTRL+C (list all with stty -a), so I can use it for Copy & Paste
-stty intr ^z
+stty intr ^x
 
 # Add SSH private keys into the SSH authentication agent
 ssh-add ~/.ssh/*.pem 

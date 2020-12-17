@@ -130,5 +130,5 @@ export PS2;
 # (%s)")]\$ '
 
 PS1="\[${userStyle}\]\u"; # username
-PS1+="\[${reset}\]@x1 \[${cyan}\]\W ⇨ \[${reset}\] ";
+PS1+="\[${reset}\]@\h \[${cyan}\]\W ⇨ \[${reset}\] ";
 export PS1;
