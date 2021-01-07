@@ -30,5 +30,9 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # Change CTRL+C (list all with stty -a), so I can use it for Copy & Paste
 stty intr ^x
 
-# Add SSH private keys into the SSH authentication agent
-ssh-add ~/.ssh/*.pem 
+# Add SSH private keys into the SSH authentication agent (If any -> $count)
+count=`ls -1 ~/.ssh/*.pem 2>/dev/null | wc -l`
+
+if [ $count != 0 ]; then
+    ssh-add ~/.ssh/*.pem 
+fi
