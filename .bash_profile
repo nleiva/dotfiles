@@ -23,7 +23,11 @@ for option in autocd globstar; do
 done;
 
 # Git stuff
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+FILE=/usr/share/git-core/contrib/completion/git-prompt.sh
+if [ -f "$FILE" ]; then
+    source $FILE
+fi
+ 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
