@@ -19,19 +19,23 @@ if [ ${kernel} = Linux ] ; then
 fi
 
 # Access to DevNet devices
-alias ios='sshpass -p C1sco12345 ssh -p 8181 developer@ios-xe-mgmt-latest.cisco.com'
+alias ios='sshpass -p C1sco12345 ssh -p 8181 developer@ios-xe-mgmt.cisco.com'
 alias iosxr='sshpass -p C1sco12345 ssh -p 8181 admin@sbx-iosxr-mgmt.cisco.com'
 alias nxos='sshpass -p Admin_1234! ssh -p 8181 admin@sbx-nxos-mgmt.cisco.com'
 
 # Personal instances (SG protected)
-alias tower='ssh centos@tower.nleiva.com'
+alias tower='ssh ec2-user@tower.nleiva.com'
 alias splunk='ssh centos@splunk.nleiva.com'
-alias host1=' ssh nleiva@172.16.199.200'
-alias pi1=' ssh pi@172.16.199.171'
-alias pi2=' ssh pi@172.16.199.172'
-alias guest1='ssh nleiva@192.168.0.17'
-alias guest2='ssh nleiva@192.168.100.45'
-alias guest3='ssh nleiva@192.168.100.82'
+alias host1='ssh nleiva@host1.lab.home'
+alias host2='ssh nleiva@host2.lab.home'
+alias pi1='ssh pi@pi1.lab.home'
+alias pi2='ssh pi@pi2.lab.home'
+alias pi3='ssh pi@pi3.lab.home'
+alias pi4='ssh pi@pi4.lab.home'
+alias pi5='ssh pi@pi5.lab.home'
+# alias guest1='ssh nleiva@192.168.0.17'
+# alias guest2='ssh nleiva@192.168.100.45'
+# alias guest3='ssh nleiva@192.168.100.82'
 
 # Other aliases
 alias docker=podman
