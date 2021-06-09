@@ -40,4 +40,5 @@ count=`ls -1 ~/.ssh/*.pem 2>/dev/null | wc -l`
 if [ $count != 0 ]; then
     ssh-add ~/.ssh/*.pem 
 fi
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 # export PATH="$HOME/.poetry/bin:$PATH"
