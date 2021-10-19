@@ -19,9 +19,9 @@ if [ ${kernel} = Linux ] ; then
 fi
 
 # Access to DevNet devices
-alias ios='sshpass -p C1sco12345 ssh -p 8181 developer@ios-xe-mgmt.cisco.com'
-alias iosxr='sshpass -p C1sco12345 ssh -p 8181 admin@sbx-iosxr-mgmt.cisco.com'
-alias nxos='sshpass -p Admin_1234! ssh -p 8181 admin@sbx-nxos-mgmt.cisco.com'
+alias ios='sshpass -p C1sco12345 ssh developer@sandbox-iosxe-latest-1.cisco.com'
+alias iosxr='sshpass -p C1sco12345 ssh admin@sandbox-iosxr-1.cisco.com'
+alias nxos='sshpass -p Admin_1234! ssh admin@sandbox-nxos-1.cisco.com'
 
 # Personal instances (SG protected)
 alias tower='ssh ec2-user@tower.nleiva.com'
