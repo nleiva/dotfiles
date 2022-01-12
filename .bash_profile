@@ -37,8 +37,8 @@ stty intr ^x
 # Add SSH private keys into the SSH authentication agent (If any -> $count)
 count=`ls -1 ~/.ssh/*.pem 2>/dev/null | wc -l`
 
-if [ $count != 0 ]; then
-    eval `ssh-agent -s`
-    ssh-add ~/.ssh/*.pem 
-fi
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+#if [ $count != 0 ]; then
+#    eval `ssh-agent -s`
+#    ssh-add ~/.ssh/*.pem 
+#fi
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/.cargo/bin

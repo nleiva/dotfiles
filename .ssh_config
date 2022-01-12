@@ -11,3 +11,16 @@ Host host2.lab.home
   GSSAPIAuthentication no
 Host rhel-7.lab.home
   GSSAPIAuthentication no
+Host *.amazonaws.com
+  User ec2-user
+  GSSAPIAuthentication no
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  UserKnownHostsFile ~/.ssh/aws_known_hosts
+  IdentityFile ~/.ssh/ansible-private.pem
+  ServerAliveInterval 120
+  TCPKeepAlive yes
+Host *.cisco.com
+  PreferredAuthentications password
+  PubkeyAuthentication no
+  StrictHostKeyChecking no
