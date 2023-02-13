@@ -25,18 +25,14 @@ alias iosxr='sshpass -p C1sco12345 ssh admin@sandbox-iosxr-1.cisco.com'
 alias nxos='sshpass -p Admin_1234! ssh admin@sandbox-nxos-1.cisco.com'
 
 # Personal instances (SG protected)
-alias tower='ssh ec2-user@tower.nleiva.com'
-alias splunk='ssh centos@splunk.nleiva.com'
 alias host1='ssh nleiva@host1.lab.home'
 alias host2='ssh nleiva@host2.lab.home'
+alias host3='ssh nleiva@host3.lab.home'
 alias pi1='ssh pi@pi1.lab.home'
 alias pi2='ssh pi@pi2.lab.home'
 alias pi3='ssh pi@pi3.lab.home'
 alias pi4='ssh pi@pi4.lab.home'
 alias pi5='ssh pi@pi5.lab.home'
-# alias guest1='ssh nleiva@192.168.0.17'
-# alias guest2='ssh nleiva@192.168.100.45'
-# alias guest3='ssh nleiva@192.168.100.82'
 
 # Other aliases
 alias docker=podman

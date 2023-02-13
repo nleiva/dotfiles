@@ -4,13 +4,15 @@ Host AWS_Instance
   HostName <IP address>
   User ec2-user
   IdentityFile ~/.ssh/nleiva-KeyPair.pem
+
 # RHEL hosts
 Host host1.lab.home
   GSSAPIAuthentication no
 Host host2.lab.home
   GSSAPIAuthentication no
-Host rhel-7.lab.home
-  GSSAPIAuthentication no
+Host host2.lab.home
+  GSSAPIAuthentication no  
+
 Host *.amazonaws.com
   User ec2-user
   GSSAPIAuthentication no
@@ -20,6 +22,7 @@ Host *.amazonaws.com
   IdentityFile ~/.ssh/ansible-private.pem
   ServerAliveInterval 120
   TCPKeepAlive yes
+
 Host *.cisco.com
   PreferredAuthentications password
   PubkeyAuthentication no
