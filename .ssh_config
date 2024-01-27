@@ -6,12 +6,14 @@ Host AWS_Instance
   IdentityFile ~/.ssh/nleiva-KeyPair.pem
 
 # RHEL hosts
-Host host1.lab.home
+Host *.lab.home
   GSSAPIAuthentication no
-Host host2.lab.home
-  GSSAPIAuthentication no
-Host host2.lab.home
-  GSSAPIAuthentication no  
+  User nleiva
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  ProxyCommand none
+  Hostname %h
+  HostKeyAlgorithms rsa-sha2-512
 
 Host *.amazonaws.com
   User ec2-user

@@ -28,11 +28,9 @@ alias nxos='sshpass -p Admin_1234! ssh admin@sandbox-nxos-1.cisco.com'
 alias host1='ssh nleiva@host1.lab.home'
 alias host2='ssh nleiva@host2.lab.home'
 alias host3='ssh nleiva@host3.lab.home'
+alias host4='ssh nleiva@host4.lab.home'
 alias pi1='ssh pi@pi1.lab.home'
 alias pi2='ssh pi@pi2.lab.home'
 alias pi3='ssh pi@pi3.lab.home'
 alias pi4='ssh pi@pi4.lab.home'
 alias pi5='ssh pi@pi5.lab.home'
-
-# Other aliases
-alias docker=podman
